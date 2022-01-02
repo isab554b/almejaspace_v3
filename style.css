@@ -6,6 +6,61 @@ Version: 1.0.0
 Description: Stylish Child Theme based on Botiga
 */
 
+/* selve containeren får display flex for at den ligger sig vandret */
+.dropdown-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 15px;
+}
+
+/* Dropdown Button og styling af to knapper */
+.dropbtn-kategori,
+.dropbtn-kategori2 {
+  background-color: #f3a2b1;
+  color: #f7f1bc;
+}
+
+/* Hover på knapper */
+.dropbtn-kategori:hover,
+.dropbtn-kategori2:hover {
+  /* color: #a4cdef; */
+}
+
+/* containeren <div> får reglen  position relative */
+.dropbtn-kategori,
+.dropbtn-kategori2 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f3a2b1;
+  min-width: 120px;
+  z-index: 1;
+}
+
+/* Linksene inde i dropdown */
+.dropdown-content div {
+  color: #f7f1bc;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+/* vis dropdown menuen når man hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /* PLACERING AF "HERO" BILLEDE PÅ HVER SIDE */
 .entry-header {
   margin-top: -120px;
@@ -85,7 +140,7 @@ div.wpforms-submit-container {
 }
 
 /* STYLING AF FILTRERING PÅ BLOG */
-nav#filtrering {
+/* nav#filtrering {
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -94,7 +149,7 @@ nav#filtrering {
   flex-wrap: wrap;
   margin-bottom: 40px;
   padding: 15px;
-}
+} */
 
 /* STYLING AF LOOP-VIEW PÅ BLOG */
 main#main.site-main {
