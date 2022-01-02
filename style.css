@@ -1,0 +1,277 @@
+/* CSS Document 
+Theme Name: Almeja Space Special
+Template: botiga
+Author: Gruppe 8
+Version: 1.0.0
+Description: Stylish Child Theme based on Botiga
+*/
+
+/* PLACERING AF "HERO" BILLEDE PÅ HVER SIDE */
+.entry-header {
+  margin-top: -120px;
+}
+
+/* FJERNER H1 PÅ HVER SIDE */
+h1.entry-title.page-title {
+  display: none;
+}
+
+/* FJERNER STREGER UNDER LINKS  */
+.entry-content a {
+  text-decoration: none;
+}
+
+.main-navigation ul {
+  font-size: 18px;
+}
+
+.bottom-header-row .main-navigation .menu > li > a:hover {
+  color: #e84a1e !important;
+}
+
+/* HERO BILLEDE PÅ PAGE BLOG */
+#splash_section {
+  position: absolute;
+  background-image: url(img/hero_blog.jpg);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 300px;
+  max-width: none;
+  max-height: none;
+
+  object-fit: cover;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  margin-top: 203.5px;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  place-content: center;
+}
+
+body {
+  margin: 0;
+}
+
+/* KONTAKTFORMULAR PÅ KONTAKTSIDE */
+textarea {
+  resize: none;
+}
+
+/* KNAP PÅ KONTAKTFORMULAR PÅ KONTAKSIDE */
+button#wpforms-submit-409.wpforms-submit {
+  background-color: #f3a2b1;
+  color: white;
+  border: 2px solid #f3a2b1;
+}
+
+button#wpforms-submit-409.wpforms-submit:hover {
+  color: #f7f1bc;
+  border: 2px solid #f7f1bc;
+}
+
+div.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* STYLING AF FILTRERING PÅ BLOG */
+nav#filtrering {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding: 15px;
+}
+
+/* STYLING AF LOOP-VIEW PÅ BLOG */
+main#main.site-main {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 260px;
+}
+
+main#main.single-site-main {
+  margin-top: 0px;
+}
+
+div.row.main-row {
+  justify-content: center;
+}
+
+h2.titel {
+  justify-content: center;
+  display: flex;
+  color: #e84a1e;
+  margin-top: 120px;
+}
+
+h4.overskrift {
+  color: #f7f1bc;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+section.blogcontainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 15px;
+}
+
+article.blog {
+  background-color: #a4cdef;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+p.dato {
+  padding: 10px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: end;
+  color: #f7f1bc;
+}
+
+div.tekst {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 55px;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+img.billede:hover {
+  opacity: 0.5;
+}
+
+/* STYLING AF SINGLE-VIEW PÅ BLOG */
+article.single_blog {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+div.billede_container {
+  display: flex;
+  justify-content: center;
+}
+
+img.billede_single {
+  max-width: 80%;
+}
+
+/* HEROIMG PÅ SHOP */
+.woocommerce-page-header {
+  background-image: url(img/hero_shop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 300px;
+}
+
+/* H1 PÅ SHOP */
+h1.woocommerce-products-header__title.page-title {
+  font-size: 48px;
+  color: #e84a1e;
+  margin: 40px;
+}
+
+button.filter:hover {
+  color: #f7f1bc;
+  border: 2px solid #f7f1bc;
+}
+
+/* WEB */
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: fit-content;
+  }
+
+  section.blogcontainer {
+    max-width: 1110px;
+  }
+}
+
+/* MOBIL */
+@media (max-width: 580px) {
+  article.single_blog {
+    padding: 20px;
+  }
+
+  div.goback_button {
+    padding: 20px;
+  }
+
+  img.billede_single {
+    max-width: 100%;
+  }
+
+  h2.titel {
+    margin-top: 150px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  #splash_section {
+    margin-top: 100px;
+  }
+
+  section.blogcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  nav#filtrering {
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  p.has-text-align-right {
+    text-align: center;
+  }
+
+  ul#menu-footer.menu {
+    text-align: center;
+  }
+
+  h2.has-text-color {
+    font-size: 35px;
+  }
+
+  h2.titel {
+    font-size: 35px;
+  }
+
+  header.woocommerce-page-header.woocommerce-page-header-style1.woocommerce-page-header-alignment-center {
+    margin-bottom: -145px;
+  }
+
+  h1.woocommerce-products-header__title.page-title {
+    font-size: 35px;
+  }
+}
