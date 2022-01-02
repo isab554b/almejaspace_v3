@@ -43,13 +43,15 @@ get_header();?>
 
     <div class="dropdown">
   	<button class="dropbtn-kategori">Emne &#9660</button>
-    <nav class="dropdown-content-first dropdown-content" id="kategori-filtrering"><div class="filter valgt" data-kat="alle">Alle</div></nav>
+    <nav class="dropdown-content-first dropdown-content" id="kategori-filtrering"><div data-kat="alle">Alle</div></nav>
     </div>
 
 	<div class="dropdown">
   	<button class="dropbtn-kategori2">Arkiv &#9660</button>
-    <nav class="dropdown-content" id="kategori2-filtrering"><div class="filter valgt" data-kat2="alle">Alle</div></nav>
+    <nav class="dropdown-content" id="kategori2-filtrering"><div data-kat2="alle">Alle</div></nav>
     </div>
+
+    <button class="dropbtn-nulstil">Nulstil</button>
 
 
     </div>
@@ -139,27 +141,14 @@ get_header();?>
 
         function filtreringKategori() {
             filterEmne = this.dataset.kat;
-             //fjern .valgt fra alle
-            document.querySelectorAll("#kategori-filtrering .filter").forEach(elm => {
-                elm.classList.remove("valgt");
-            });
-            //tilføj .valgt til den valgte
-            this.classList.add("valgt");
             visBlogs();
         }
 
 		function filtreringKategori2() {
             filterArkiv = this.dataset.kat2;
-            //fjern .valgt fra alle
-            document.querySelectorAll("#kategori2-filtrering .filter").forEach(elm => {
-                elm.classList.remove("valgt");
-            });
-            //tilføj .valgt til den valgte
-            this.classList.add("valgt");
             visBlogs();
         }
 
-        getJson();
 
              </script>
 
