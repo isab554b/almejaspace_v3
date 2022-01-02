@@ -12,6 +12,7 @@
  * @package Botiga
  */
 
+//  test
 get_header();
 ?>
 
