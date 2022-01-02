@@ -163,5 +163,9 @@ get_header();?>
 
              </script>
 
+</div>
 
-<?php get_footer(); ?>
+
+<?php
+do_action( 'botiga_do_sidebar' );
+get_footer();
