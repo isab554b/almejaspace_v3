@@ -51,7 +51,7 @@ get_header();?>
     <nav class="dropdown-content" id="kategori2-filtrering"><div data-kat2="alle">Alle</div></nav>
     </div>
 
-    <button class="dropbtn-nulstil">Nulstil</button>
+    <button class="dropbtn-nulstil" onclick="clearFilters()">Nulstil</button>
 
 
     </div>
@@ -134,10 +134,9 @@ get_header();?>
 
             document.querySelectorAll("#kategori2-filtrering div").forEach(elm => {
                 elm.addEventListener("click", filtreringKategori2);
-            })           
+            })  
+
         }
-
-
 
         function filtreringKategori() {
             filterEmne = this.dataset.kat;
@@ -148,6 +147,10 @@ get_header();?>
             filterArkiv = this.dataset.kat2;
             visBlogs();
         }
+
+    //   function clearFilters() {
+    //       document.querySelector(".dropbtn-nulstil").reset();
+    //   }
 
 
              </script>

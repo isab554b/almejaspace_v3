@@ -111,7 +111,7 @@ h1.entry-title.page-title {
   outline: none;
   border: none;
   box-shadow: none;
-  margin-top: 203.5px;
+  margin-top: 171.5px !important;
   background-size: cover;
   background-position: center;
 
