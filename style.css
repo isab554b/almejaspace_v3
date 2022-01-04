@@ -2,7 +2,7 @@
 Theme Name: Almeja Space Special
 Template: botiga
 Author: Gruppe 8
-Version: 1.0.0
+Version: 1.2.0
 Description: Stylish Child Theme based on Botiga
 */
 
@@ -11,10 +11,11 @@ Description: Stylish Child Theme based on Botiga
 .dropdown-menu {
   display: flex;
   flex-direction: row;
-  gap: 45px;
-  justify-content: center;
+  gap: 40px;
+  justify-content: flex-end;
   overflow-x: auto;
   padding: 15px;
+  margin: 0 30px 15px 0;
 }
 
 .dropbtn-kategori,
@@ -46,6 +47,10 @@ Description: Stylish Child Theme based on Botiga
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+hr {
+  border: 1px solid #e84a1e;
 }
 
 /* STYLING AF DROPDOWN KNAPPER */
@@ -109,7 +114,7 @@ h1.entry-title.page-title {
   outline: none;
   border: none;
   box-shadow: none;
-  margin-top: 202.5px !important;
+  margin-top: 202.5px;
   background-size: cover;
   background-position: center;
 
@@ -173,9 +178,9 @@ h4.overskrift {
 
 section.blogcontainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 article.blog {
@@ -250,10 +255,17 @@ button.filter:hover {
   .container-xl {
     max-width: fit-content;
   }
+}
+
+/* IPAD */
+@media (min-width: 1025px) {
+  #splash_section {
+    margin-top: 131.5px;
+  }
 
   section.blogcontainer {
-    max-width: 1110px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* MOBIL */

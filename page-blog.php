@@ -30,7 +30,6 @@ get_header();?>
     </template>
 
  <div id="primary" class="content-area">
-		<section class="blogsection">
 	<main id="main" class="site-main">
 
 	
@@ -52,13 +51,13 @@ get_header();?>
     </div>
     </div>
 
+    <hr>
+
 		
         <section class="blogcontainer">
         </section>
 		
         </main>
-		</section>
-
 
 	<script>
 	let blogs; 
