@@ -14,8 +14,6 @@ Description: Stylish Child Theme based on Botiga
   gap: 45px;
   justify-content: center;
   overflow-x: auto;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
   padding: 15px;
 }
 
@@ -111,7 +109,7 @@ h1.entry-title.page-title {
   outline: none;
   border: none;
   box-shadow: none;
-  margin-top: 171.5px !important;
+  margin-top: 202.5px !important;
   background-size: cover;
   background-position: center;
 
@@ -170,8 +168,7 @@ h2.titel {
 
 h4.overskrift {
   color: #f7f1bc;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding: 0 12px 0 12px;
 }
 
 section.blogcontainer {
@@ -200,8 +197,7 @@ div.tekst {
   display: flex;
   justify-content: center;
   font-size: 18px;
-  margin-top: 55px;
-  margin-bottom: 10px;
+  margin: 55px 0 0 10px;
   padding: 15px;
 }
 
@@ -227,9 +223,7 @@ img.billede_single {
 
 /* HEROIMG PÅ SHOP */
 .woocommerce-page-header {
-  background-image: url(img/hero_shop.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(img/hero_shop.jpg) no-repeat center;
   background-size: cover;
   position: relative;
   height: 300px;

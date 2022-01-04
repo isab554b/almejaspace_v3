@@ -43,17 +43,13 @@ get_header();?>
 
     <div class="dropdown">
   	<button class="dropbtn-kategori">Emne &#9660</button>
-    <nav class="dropdown-content-first dropdown-content" id="kategori-filtrering"><div data-kat="alle">Alle</div></nav>
+    <nav class="dropdown-content-first dropdown-content" id="kategori-filtrering"><div data-kat="alle">Alle emner</div></nav>
     </div>
 
 	<div class="dropdown">
   	<button class="dropbtn-kategori2">Arkiv &#9660</button>
-    <nav class="dropdown-content" id="kategori2-filtrering"><div data-kat2="alle">Alle</div></nav>
+    <nav class="dropdown-content" id="kategori2-filtrering"><div data-kat2="alle">Alle år</div></nav>
     </div>
-
-    <button class="dropbtn-nulstil" onclick="clearFilters()">Nulstil</button>
-
-
     </div>
 
 		
@@ -82,11 +78,8 @@ get_header();?>
 	}
 
 	async function getJson() {
-            //hent alle custom posts: blogs
             const url = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/blog?per_page=100";
-            //hent custom category: kategori
             const katUrl = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/emne";
-             //hent custom category: kategori2
             const kat2Url = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/arkiv";
             
             let response = await fetch(url);
@@ -114,7 +107,6 @@ get_header();?>
         function visBlogs() {
         container.innerHTML = "";
         blogs.forEach(blog => {
-    //tjek filterKategori og filterArkiv til filtrering
         if ((filterEmne == "alle" || blog.emne.includes(parseInt(filterEmne)))
         && (filterArkiv == "alle"  || blog.arkiv.includes(parseInt(filterArkiv)))) {
         let klon = temp.cloneNode(true).content;
@@ -147,12 +139,6 @@ get_header();?>
             filterArkiv = this.dataset.kat2;
             visBlogs();
         }
-
-    //   function clearFilters() {
-    //       document.querySelector(".dropbtn-nulstil").reset();
-    //   }
-
-
              </script>
 
 </div>
