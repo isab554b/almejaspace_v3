@@ -50,9 +50,6 @@ get_header();?>
     <nav class="dropdown-content" id="kategori2-filtrering"><div data-kat2="alle">Alle år</div></nav>
     </div>
     </div>
-
-    <hr>
-
 		
         <section class="blogcontainer">
         </section>
