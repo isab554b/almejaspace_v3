@@ -18,7 +18,7 @@ get_header();?>
 
  
  <section id="splash_section">
-		 <h2 class="titel">BLOG</h2>
+		 <h2 class="titel">VELKOMMEN TIL VORES BLOG!</h2>
 	</section>
 
      <template>
@@ -34,7 +34,7 @@ get_header();?>
 
 	
 	<div class="tekst">
-		<p>Velkommen til vores blog! Her deler vi nye gode idéer, farver, guides, tips og tricks 
+		<p>Her deler vi nye gode idéer, farver, guides, tips og tricks 
 		til inspiration til din næste farverige begivenhed eller stylingprojekt.</p>
 	</div>
 

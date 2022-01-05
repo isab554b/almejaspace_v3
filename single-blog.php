@@ -32,7 +32,7 @@ get_header();
 		</main>
  <script>
     let blog;
-    const dbUrl = "https://isahilarius.dk/kea/10_eksamensprojekt/almejaspace/wp-json/wp/v2/blog/"+<?php echo get_the_ID() ?>;
+    const dbUrl = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/blog/"+<?php echo get_the_ID() ?>;
      
 
     async function getJson() {

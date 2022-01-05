@@ -2,7 +2,7 @@
 Theme Name: Almeja Space Special
 Template: botiga
 Author: Gruppe 8
-Version: 1.2.0
+Version: 1.0.0
 Description: Stylish Child Theme based on Botiga
 */
 
@@ -11,10 +11,10 @@ Description: Stylish Child Theme based on Botiga
 .dropdown-menu {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 33px;
   justify-content: flex-start;
   overflow-x: auto;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 
 .dropbtn-kategori,
@@ -164,6 +164,7 @@ h2.titel {
   display: flex;
   color: #e84a1e;
   margin-top: 120px;
+  text-align: center;
 }
 
 h4.overskrift {
@@ -175,7 +176,6 @@ section.blogcontainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
-  /* padding: 15px; */
 }
 
 article.blog {
@@ -250,13 +250,28 @@ button.filter:hover {
   .container-xl {
     max-width: fit-content;
   }
+
+  section.blogcontainer {
+    max-width: 100%;
+  }
 }
 
 /* IPAD */
-@media (min-width: 1025px) {
+@media (max-width: 1025px) {
   #splash_section {
     margin-top: 131.5px;
   }
+
+  section.blogcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+  .dropdown-menu {
+    justify-content: center;
+  }
+}
 
 /* MOBIL */
 @media (max-width: 580px) {
@@ -286,14 +301,13 @@ button.filter:hover {
 
   section.blogcontainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 15px;
   }
 
-  nav#filtrering {
-    gap: 15px;
-    margin-bottom: 15px;
+  .dropdown-menu {
+    justify-content: center;
   }
 
   p.has-text-align-right {
