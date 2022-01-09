@@ -91,7 +91,7 @@ h1.entry-title.page-title {
 /* HERO BILLEDE PÅ PAGE BLOG */
 #splash_section {
   position: absolute;
-  background-image: url(img/hero_blog.jpg);
+  background-image: url(img/hero_blog.webp);
 
   top: 0;
   left: 0;
@@ -223,7 +223,7 @@ img.billede_single {
 
 /* HEROIMG PÅ SHOP */
 .woocommerce-page-header {
-  background: url(img/hero_shop.jpg) no-repeat center;
+  background: url(img/hero_shop.webp) no-repeat center;
   background-size: cover;
   position: relative;
   height: 300px;

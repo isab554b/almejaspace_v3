@@ -78,9 +78,9 @@ get_header();?>
             const katUrl = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/emne";
             const kat2Url = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/arkiv";
             
-            let response = await fetch(url);
-            let katResponse = await fetch(katUrl);
-            let kat2Response = await fetch(kat2Url);
+            const response = await fetch(url);
+            const katResponse = await fetch(katUrl);
+            const kat2Response = await fetch(kat2Url);
             blogs = await response.json();
             kategorier = await katResponse.json();
             kategorier2 = await kat2Response.json();
