@@ -50,8 +50,7 @@ Description: Stylish Child Theme based on Botiga
 
 /* STYLING AF DROPDOWN KNAPPER */
 .dropbtn-kategori,
-.dropbtn-kategori2,
-.dropbtn-nulstil {
+.dropbtn-kategori2 {
   background-color: #f3a2b1;
   color: white;
   border: 2px solid #f3a2b1;
@@ -59,8 +58,7 @@ Description: Stylish Child Theme based on Botiga
 }
 
 .dropbtn-kategori:hover,
-.dropbtn-kategori2:hover,
-.dropbtn-nulstil:hover {
+.dropbtn-kategori2:hover {
   color: #f7f1bc;
   border: 2px solid #f3a2b1;
 }
@@ -95,21 +93,8 @@ h1.entry-title.page-title {
   background-image: url(img/hero_blog.webp);
 
   top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 0;
-
   width: 100%;
   height: 300px;
-  max-width: none;
-  max-height: none;
-
-  object-fit: cover;
-  outline: none;
-  border: none;
-  box-shadow: none;
   margin-top: 202.5px;
   background-size: cover;
   background-position: center;

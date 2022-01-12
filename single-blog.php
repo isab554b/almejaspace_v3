@@ -17,7 +17,8 @@ get_header();
 
 	<div id="primary" class="content-area">
 	<main id="main" class="single-site-main">
-     <div class="goback_button">
+
+    <div class="goback_button">
 		<button onclick="goBack()">Tilbage</button>
     </div>
 		
@@ -29,33 +30,34 @@ get_header();
       </div>
     </article>
 
-		</main>
+	</main>
+  </div>
+
  <script>
     let blog;
     const dbUrl = "https://isahilarius.dk/kea/almejaspace_v3/wp-json/wp/v2/blog/"+<?php echo get_the_ID() ?>;
      
 
     async function getJson() {
-        const data = await fetch(dbUrl);
-        blog = await data.json();
-        visBlogs();
+      const data = await fetch(dbUrl);
+      blog = await data.json();
+      visBlogs();
     }
 
     function visBlogs() {
-	document.querySelector(".titel_single").textContent = blog.title.rendered;
- 	document.querySelector(".billede_single").src = blog.billede.guid;
-	document.querySelector(".beskrivelse").textContent = blog.beskrivelse;
-	
-} 
+  	document.querySelector(".titel_single").textContent = blog.title.rendered;
+ 	  document.querySelector(".billede_single").src = blog.billede.guid;
+	  document.querySelector(".beskrivelse").textContent = blog.beskrivelse;
+    } 
 
-function goBack() {
-  window.history.back();
-}
+    function goBack() {
+    window.history.back();
+    }
+    
     getJson();
 
 </script>
 
-</div>
 
 <?php
 do_action( 'botiga_do_sidebar' );
