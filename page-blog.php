@@ -30,8 +30,7 @@ get_header();?>
     </template>
 
  <div id="primary" class="content-area">
-	<main id="main" class="site-main">
-
+    <main id="main" class="site-main">
 	
 	<div class="tekst">
 		<p>Her deler vi nye gode idéer, farver, guides, tips og tricks 
@@ -51,10 +50,11 @@ get_header();?>
     </div>
     </div>
 		
-        <section class="blogcontainer">
-        </section>
+    <section class="blogcontainer">
+    </section>
 		
-        </main>
+    </main>
+</div>
 
 	<script>
 	let blogs; 
@@ -84,38 +84,22 @@ get_header();?>
             blogs = await response.json();
             kategorier = await katResponse.json();
             kategorier2 = await kat2Response.json();
-            
 
             visBlogs();
             opretKnapper();
         }
 
 		function opretKnapper(){
-                kategorier.forEach(kat=>{document.querySelector("#kategori-filtrering").innerHTML += `<div class="filter" data-kat="${kat.id}">${kat.name}</div>`
+            kategorier.forEach(kat=>{document.querySelector("#kategori-filtrering").innerHTML += `<div class="filter" data-kat="${kat.id}">${kat.name}</div>`
             })
-                kategorier2.forEach(kat2=>{document.querySelector("#kategori2-filtrering").innerHTML += `<div class="filter" data-kat2="${kat2.id}">${kat2.name}</div>`
+            
+            kategorier2.forEach(kat2=>{document.querySelector("#kategori2-filtrering").innerHTML += `<div class="filter" data-kat2="${kat2.id}">${kat2.name}</div>`
             })
 
             addEventListenersToButtons();
             }
 
-
-        function visBlogs() {
-        container.innerHTML = "";
-        blogs.forEach(blog => {
-        if ((filterEmne == "alle" || blog.emne.includes(parseInt(filterEmne)))
-        && (filterArkiv == "alle"  || blog.arkiv.includes(parseInt(filterArkiv)))) {
-        let klon = temp.cloneNode(true).content;
- 	    klon.querySelector(".billede").src = blog.billede.guid;
-	    klon.querySelector(".dato").textContent = blog.dato;
-	    klon.querySelector(".overskrift").textContent = blog.title.rendered;
-        klon.querySelector("article").addEventListener("click", ()=> {location.href = blog.link;})
-        container.appendChild(klon);
-                } 
-            })
-        }
-
-		function addEventListenersToButtons() {
+        function addEventListenersToButtons() {
 			document.querySelectorAll("#kategori-filtrering div").forEach(elm => {
                 elm.addEventListener("click", filtreringKategori);
             })
@@ -135,10 +119,24 @@ get_header();?>
             filterArkiv = this.dataset.kat2;
             visBlogs();
         }
-             </script>
 
-</div>
 
+        function visBlogs() {
+        container.innerHTML = "";
+        blogs.forEach(blog => {
+        if ((filterEmne == "alle" || blog.emne.includes(parseInt(filterEmne)))
+        && (filterArkiv == "alle"  || blog.arkiv.includes(parseInt(filterArkiv)))) {
+        let klon = temp.cloneNode(true).content;
+ 	    klon.querySelector(".billede").src = blog.billede.guid;
+	    klon.querySelector(".dato").textContent = blog.dato;
+	    klon.querySelector(".overskrift").textContent = blog.title.rendered;
+        klon.querySelector("article").addEventListener("click", ()=> {location.href = blog.link;})
+        container.appendChild(klon);
+                } 
+            })
+        }
+    
+    </script>
 
 <?php
 do_action( 'botiga_do_sidebar' );

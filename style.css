@@ -84,6 +84,7 @@ h1.entry-title.page-title {
   font-size: 18px;
 }
 
+/* HOVER PÅ MENU */
 .bottom-header-row .main-navigation .menu > li > a:hover {
   color: #e84a1e !important;
 }
@@ -146,8 +147,7 @@ div.wpforms-submit-container {
 /* STYLING AF LOOP-VIEW PÅ BLOG */
 main#main.site-main {
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0 0 0 0;
   margin-top: 260px;
 }
 
